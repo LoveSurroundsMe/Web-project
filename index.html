@@ -3,8 +3,31 @@
 <head>
     <meta charset="UTF-8" />
     <meta charset="UTF-8" />
+    <style>
+        .marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+ 
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%; /* 初始偏移，使内容一开始不可见 */
+  animation: marquee 10s linear infinite; /* 动画效果 */
+   font-size: xxx-large; 
+}
+ 
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); } /* 移动到屏幕外 */
+}
+    </style>
 </head>
 <body>
 <h1 style="color:red">wang xue li ,Hello!</h1>
+<div class="marquee">
+  <div class="marquee-content">x西瓜呀x西瓜呀x西瓜呀x西瓜呀x西瓜呀x西瓜呀x西瓜呀x西瓜呀x西瓜呀x西瓜呀x西瓜呀x西瓜呀</div>
+</div>
 </body>
 </html>
